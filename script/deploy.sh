@@ -8,15 +8,11 @@ else
     exit 1
 fi
 
-maxSupply=30
-price=1
-maxMint=30
-minPEPE=0
-burnPercent=0
+sample=1
 
 forge create --rpc-url ${GOERLI_RPC_URL} \
-    --constructor-args $maxSupply $price $maxMint $minPEPE $burnPercent "POPPERS" "POPPERS" \
+    --constructor-args $sample \
     --private-key ${PRIVATE_KEY} \
     --etherscan-api-key ${ETHERSCAN_API_KEY} \
     --verify \
-    src/Poppers.sol:Poppers
+    src/Sample.sol:Sample
